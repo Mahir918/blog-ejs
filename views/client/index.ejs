@@ -1,0 +1,67 @@
+<%- include('head')%>
+
+
+<div class="container">
+
+
+
+<div class="main">
+    <% if(data.length > 0){
+        data.forEach((row,index)=>{ %>
+    <div class="card">
+        <div class="image">
+            <%for (var i = 0; i < row.image.length; i++){%>
+                <%if(i === 0 ){%>
+            <img
+            src="/uploads/<%= row.image[i]%>">
+            <%} }%>   
+        </div>
+        <div class="title">
+            <h1><%= row.heading%></h1>
+        </div>
+        <div class="des">
+            <!-- <p><%- row.description.slice(0,45)%></p> -->
+            <small class="text-muted "><%= row.category.category%></small>
+            <a  href="/<%= row._id%>" class="btn btn-primary">Read More...</a>
+        </div>
+    </div>
+    <%})}%>
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+<% if (pages > 0) { %>
+    <ul class="pagination text-center">
+        <% if (current == 1) { %>
+            <li class=" page-item"><a class="page-link">First</a></li>
+        <% } else { %>
+            <li class="page-item"><a class="page-link" href="/category/1">First</a></li>
+        <% } %>
+        <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+        <% if (i !== 1) { %>
+            <li class=" page-item"><a class="page-link">...</a></li>
+        <% } %>
+        <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+            <% if (i == current) { %>
+                <li class=" page-item"><a class="page-link"><%= i %></a></li>
+            <% } else { %>
+                <li><a class="page-link" href="/category/<%= i %>"><%= i %></a></li>
+            <% } %>
+            <% if (i == Number(current) + 4 && i < pages) { %>
+                <li class=" page-item"><a class="page-link">...</a></li>
+            <% } %>
+        <% } %>
+        <% if (current == pages) { %>
+            <li class=" page-item"><a class="page-link">Last</a></li>
+        <% } else { %>
+            <li class="page-item"><a class="page-link" href="/category/<%= pages %>">Last</a></li>
+        <% } %>
+    </ul>
+<% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('footer')%>

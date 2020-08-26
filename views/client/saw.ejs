@@ -1,0 +1,49 @@
+<%- include('head')%>
+
+	<div class="main-div">
+		<div class="main div">
+			<div class="ads-left"></div>
+			<div class="posts">
+				<div class="start">
+				<div class="heading">
+					<h3 class="heading-post"><%= data.heading%></h3>
+				</div>
+				<div class="image-section">
+					<div class="image-main">
+                        <%for (var i = 0; i < data.image.length; i++){%>
+                            <%if(i === 0 ){%>
+                        <img src="/uploads/<%= data.image[i]%>" />
+                        <%}%>
+					</div>
+					<div class="download">
+                        <%if(i === 1 ){%>
+						<span>Download Zip File!</span>
+						<a href="/uploads/<%= data.image[1]%>" download>
+							<button class="btn">Download</button>
+						</a>
+                    </div>
+                    <%}}%>
+				</div>
+
+				<div class="category">
+					<a href="#">
+					<p class="cat-design">Category: <%= data.category.category%></p></a>
+				</div>
+				<div class="paragraph">
+					<p class="para-section">
+						<%- data.description%>
+					</p>
+				</div>
+				<!-- <div class="ads-bootom">
+					<img class="ads" src="/uploads/leaderboard-placeholder.png">
+				</div> -->
+				</div>
+			</div>
+			<!-- <div class="ads-right">
+				<img class="ads" src="/uploads/images.jpg">
+			</div> -->
+		</div>
+	</div>
+</body>
+</html>
+<%- include('footer')%>

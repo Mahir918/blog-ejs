@@ -1,0 +1,180 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+    width: 94%;
+}
+.main.div {
+    overflow: hidden;
+}
+
+.ads-left {
+    width: 11%;
+    
+    border: 1px solid  transparent;
+    display: inline;
+    float: left;
+}
+
+.posts {
+    width: 66%;
+   
+    border: 1px solid  #00000012;
+    display: inline;
+    float: left;
+    margin-left: 5px;
+}
+
+.ads-right {
+    width: 22%;
+    
+    
+    display: inline;
+    float: right;
+}
+.start {
+    width: 96%;
+    
+    margin: 9px auto;
+    
+}
+
+.heading-post{
+    text-align: center;
+    padding: 12px;
+    font-weight: bolder;
+    font-size: 39px;
+}
+
+
+.image-main {
+    width: 74%;
+    margin: auto;
+    border: 1px solid #ffebeb;
+    margin-top: 4px;
+    box-shadow: 0px 1px 0px #0000003d;
+}
+
+.image-section {
+    width: 100%;
+}
+
+.heading {
+    border-bottom: 1px solid #00000026;
+    border-radius: 6px;
+}
+.download {
+    width: 20%;
+    margin: 12px auto;
+}
+
+button.btn {
+    background: #f44336;
+    padding: 9px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.category {
+    width: 75%;
+    margin: 1px auto;
+}
+
+p.cat-design {
+    width: 20%;
+    text-align: center;
+    border: 1px solid #00000061;
+    padding: 4px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+}
+a {
+    text-decoration: none;
+}
+.paragraph {
+    width: 81%;
+    margin: 13px auto;
+    border: 1px solid #d4a3a326;
+    padding: 9px;
+}
+
+p.para-section {
+    text-align: justify;
+}
+img.ads {
+    padding: 4px;
+    width: 100%;
+}
+@media all and (max-width: 1279px) {
+    .ads-left{
+        width: 11%;
+        float: none;
+        display: block;
+    }
+    .posts{
+        width: 66%;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 1279px) {
+    .ads-left{
+        width: 11%;
+        float: none;
+        display: block;
+    }
+    .posts{
+        width: 66%;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 1195px) {
+    .ads-left{
+        width: 11%;
+    }
+    .posts{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 786px) {
+    .ads-left{
+        width: 0%;
+    }
+    .posts{
+        width: 100%;
+        margin: auto;
+    }
+    .category{
+        width: 90%;
+        margin: 1px auto;
+    }
+}
+@media all and (max-width: 590px) {
+    .ads-left{
+        width: 0%;
+    }
+    .posts{
+        width: 100%;
+        margin: auto;
+    }
+    .category {
+        width: 79%;
+        margin: 1px auto;
+    }
+    p.cat-design {
+        width: 41%;
+        text-align: center;
+        border: 1px solid #00000061;
+        padding: 0px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 6px;
+    }
+}

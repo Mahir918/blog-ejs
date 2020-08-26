@@ -1,0 +1,12 @@
+<%- include('head')%>
+    <div class="container">
+        <div class="row">
+            <%if(data.length>0){%>
+                <% data.forEach((row,index)=>{%>
+                   
+                    <p><%= row.category %></p>
+                <%})%>
+            <%}%>
+        </div>
+    </div>
+<%- include('footer')%>

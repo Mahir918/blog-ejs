@@ -1,0 +1,35 @@
+<%- include('header')%>
+
+
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 col-xs-6">
+            <h1 class="text-center "><%= data.heading%></h1>
+            <div class="text-center img-thumbnail">
+                <%for (var i = 0; i < data.image.length; i++){%>
+                <%if(i == 0){%>
+                    <img class="img-fluid rounded" src="/uploads/<%= data.image[i] %>">
+                <%}%>
+                <%if(i == 1){%>
+                    <a class="d-block" href="/uploads/<%= data.image[1] %>" download>
+                        <button type="button" class="btn btn-outline-danger center">Download</button>
+                    </a>
+                <%}%>
+            </div>
+            <%}%>
+
+            <span class="badge badge-primary text-wrap mt-4"> category : <%= data.category.category%></span>
+           
+        
+            <span class="border-top">
+                <p class=" text-justify"><%- data.description%></p>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('footer')%>
